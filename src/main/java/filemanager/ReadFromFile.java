@@ -15,8 +15,8 @@ public class ReadFromFile
 
     public List<Integer> readFromFile (String filePatch)
     {
-        File fileToRead = new File("/home/dominik/Pobrane/number.txt");
-        List<String> lines = new LinkedList<String>();
+        File fileToRead = new File(filePatch);
+        List<Integer> lines = new ArrayList<>();
         //List<Integer> integerList = new ArrayList<>();
 
         if (fileToRead.exists())
@@ -25,8 +25,7 @@ public class ReadFromFile
             {
                 while (scanner.hasNext())
                 {
-                    //lines.add(scanner.nextLine());
-                    int x = Integer.parseInt(lines.toString());
+                    lines.add(Integer.parseInt(scanner.next()));
 
                 }
             }
@@ -40,7 +39,7 @@ public class ReadFromFile
         {
             System.out.println(line);
         }*/
-       return readFromFile(filePatch);
+       return lines;
     }
 
 }

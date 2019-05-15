@@ -1,33 +1,27 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Exponentiation
 {
-    private List<Integer> exponentiationList;
-    private List<Integer> primeList;
-
-    public Exponentiation(List<Integer> exponentiationList, List<Integer> primeList)
+    public static List<Integer> exponentiation (List<Integer> integerList)
     {
-        this.exponentiationList = exponentiationList;
-        this.primeList = primeList;
-    }
+        List<Integer> resoltList = new ArrayList<>();
 
-    public List<Integer> getExponentiationList()
-    {
-        for (Integer integer: primeList)
+        PowerInterface powerInterface = x -> (int)Math.pow(x, 3);
+
+        for (Integer integer: integerList)
         {
-            if (primeList.get() < 20)
+            if(integer < 20)
             {
-
+                resoltList.add(powerInterface.sum(integer));
+            }
+            else
+            {
+                resoltList.add(integer);
             }
         }
-        //exponentiationList.add();
-        return exponentiationList;
-    }
-
-    public List<Integer> getPrimeList()
-    {
-        return primeList;
+        return resoltList;
     }
 }
