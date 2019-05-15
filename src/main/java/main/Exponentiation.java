@@ -7,7 +7,7 @@ public class Exponentiation
 {
     public static List<Integer> exponentiation (List<Integer> integerList)
     {
-        List<Integer> resoltList = new ArrayList<>();
+        List<Integer> resultList = new ArrayList<>();
 
         PowerInterface powerInterface = x -> (int)Math.pow(x, 3);
 
@@ -15,13 +15,13 @@ public class Exponentiation
         {
             if(integer < 20)
             {
-                resoltList.add(powerInterface.sum(integer));
+                resultList.add(powerInterface.sum(integer));
             }
             else
             {
-                resoltList.add(integer);
+                resultList.add(integer);
             }
         }
-        return resoltList;
+        return resultList;
     }
 }

@@ -7,19 +7,17 @@ public class SaveToFile
 {
     public void saveToFile(List<Integer> integerList)
     {
-        try {
+        try
+        {
             FileOutputStream f = new FileOutputStream(new File("/home/dominik/Pobrane/intigerlist.txt"));
             ObjectOutputStream o = new ObjectOutputStream(f);
             o.writeObject(integerList);
             o.close();
             f.close();
-
         }
-        catch (FileNotFoundException e)
+        catch (Exception e)
         {
             System.out.println(e.getMessage());
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }

@@ -21,11 +21,10 @@ public class Menu
             System.out.println(integer);
         }
 
+
         System.out.println("Liczby mniejsze niż 20 podniesione do potęgi 3: ");
 
-
-
-         integerList = Exponentiation.exponentiation(integerList);
+        integerList = Exponentiation.exponentiation(integerList);
 
         for (Integer integer: integerList)
         {
